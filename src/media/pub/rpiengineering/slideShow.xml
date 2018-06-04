@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/pub/rpiengineering/rpiengineering01.jpg" contentSize="800" />
+    <item source="pages/pub/rpiengineering/rpiengineering02.jpg" contentSize="560" />
+    <item source="pages/pub/rpiengineering/rpiengineering03.jpg" contentSize="592" />
+    <item source="pages/pub/rpiengineering/rpiengineering04.jpg" contentSize="800" />
+    <item source="pages/pub/rpiengineering/rpiengineering05.jpg" contentSize="800" />
+    <item source="pages/pub/rpiengineering/rpiengineering06.jpg" contentSize="619" />
+    <item source="pages/pub/rpiengineering/rpiengineering07.jpg" contentSize="585" />
+    <item source="pages/pub/rpiengineering/rpiengineering08.jpg" contentSize="800" />
+    <item source="pages/pub/rpiengineering/rpiengineering09.jpg" contentSize="589" />
+  </data>
+</component>

@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/pub/corningbridge/corningbridge01.jpg" contentSize="800" />
+    <item source="pages/pub/corningbridge/corningbridge02.jpg" contentSize="651" />
+    <item source="pages/pub/corningbridge/corningbridge03.jpg" contentSize="633" />
+    <item source="pages/pub/corningbridge/corningbridge04.jpg" contentSize="584" />
+    <item source="pages/pub/corningbridge/corningbridge05.jpg" contentSize="410" />
+    <item source="pages/pub/corningbridge/corningbridge06.jpg" contentSize="385" />
+  </data>
+</component>

@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/pub/youthbureau/youthbureau01.jpg" contentSize="800" />
+    <item source="pages/pub/youthbureau/youthbureau02.jpg" contentSize="623" />
+    <item source="pages/pub/youthbureau/youthbureau03.jpg" contentSize="634" />
+    <item source="pages/pub/youthbureau/youthbureau04.jpg" contentSize="288" />
+    <item source="pages/pub/youthbureau/youthbureau05.jpg" contentSize="776" />
+    <item source="pages/pub/youthbureau/youthbureau06.jpg" contentSize="546" />
+    <item source="pages/pub/youthbureau/youthbureau07.jpg" contentSize="345" />
+  </data>
+</component>

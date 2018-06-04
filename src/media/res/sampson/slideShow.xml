@@ -1,0 +1,7 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/res/sampson/sampson01.jpg" contentSize="284" contentHt="430"/>
+    <item source="pages/res/sampson/sampson02.jpg" contentSize="241" contentHt="430"/>
+  </data>
+</component>

@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/res/dicicco/dicicco09.jpg" contentSize="337" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco02.jpg" contentSize="654" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco04.jpg" contentSize="687" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco05.jpg" contentSize="629" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco01.jpg" contentSize="276" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco03.jpg" contentSize="430" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco06.jpg" contentSize="282" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco07.jpg" contentSize="295" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco08.jpg" contentSize="642" contentHt="430" />
+    <item source="pages/res/dicicco/dicicco10.jpg" contentSize="370" contentHt="430" />
+  </data>
+</component>

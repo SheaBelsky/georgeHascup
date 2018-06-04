@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/pub/chambercommerce/chambercommerce01.jpg" contentSize="800" />
+    <item source="pages/pub/chambercommerce/chambercommerce02.jpg" contentSize="281" />
+    <item source="pages/pub/chambercommerce/chambercommerce03.jpg" contentSize="297" />
+    <item source="pages/pub/chambercommerce/chambercommerce04.jpg" contentSize="623" />
+    <item source="pages/pub/chambercommerce/chambercommerce05.jpg" contentSize="686" />
+    <item source="pages/pub/chambercommerce/chambercommerce06.jpg" contentSize="307" />
+  </data>
+</component>

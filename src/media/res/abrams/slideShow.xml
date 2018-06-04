@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/res/abrams/abrams04.jpg" contentSize="199" contentHt="430" />
+    <item source="pages/res/abrams/abrams03.jpg" contentSize="290" contentHt="430" />
+    <item source="pages/res/abrams/abrams01.jpg" contentSize="292" contentHt="430" />
+    <item source="pages/res/abrams/abrams05.jpg" contentSize="636" contentHt="430" />
+    <item source="pages/res/abrams/abrams06.jpg" contentSize="641" contentHt="430" />
+    <item source="pages/res/abrams/abrams02.jpg" contentSize="589" contentHt="430" />
+  </data>
+</component>

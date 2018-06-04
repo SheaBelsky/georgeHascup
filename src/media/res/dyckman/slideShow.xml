@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/res/dyckman/dyckman08.jpg" contentSize="458" contentHt="430" />
+    <item source="pages/res/dyckman/dyckman05.jpg" contentSize="643" contentHt="430" />
+    <item source="pages/res/dyckman/dyckman06.jpg" contentSize="643" contentHt="430" />
+    <item source="pages/res/dyckman/dyckman01.jpg" contentSize="800" contentHt="335" />
+    <item source="pages/res/dyckman/dyckman04.jpg" contentSize="403" contentHt="430" />
+    <item source="pages/res/dyckman/dyckman09.jpg" contentSize="644" contentHt="430" />
+    <item source="pages/res/dyckman/dyckman02.jpg" contentSize="290" contentHt="430" />
+    <item source="pages/res/dyckman/dyckman03.jpg" contentSize="448" contentHt="430" />
+    <item source="pages/res/dyckman/dyckman07.jpg" contentSize="607" contentHt="430" />
+    <item source="pages/res/dyckman/dyckman10.jpg" contentSize="712" contentHt="430" />
+  </data>
+</component>

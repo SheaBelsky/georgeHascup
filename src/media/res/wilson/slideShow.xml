@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/res/wilson/wilson04.jpg" contentSize="660" contentHt="430" />
+    <item source="pages/res/wilson/wilson01.jpg" contentSize="388" contentHt="430" />
+    <item source="pages/res/wilson/wilson02.jpg" contentSize="395" contentHt="430" />
+    <item source="pages/res/wilson/wilson03.jpg" contentSize="289" contentHt="430" />
+  </data>
+</component>

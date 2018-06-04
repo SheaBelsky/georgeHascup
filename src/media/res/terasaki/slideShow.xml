@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/res/terasaki/terasaki06.jpg" contentSize="327" contentHt="430" />
+    <item source="pages/res/terasaki/terasaki01.jpg" contentSize="616" contentHt="430" />
+    <item source="pages/res/terasaki/terasaki02.jpg" contentSize="611" contentHt="430" />
+    <item source="pages/res/terasaki/terasaki03.jpg" contentSize="640" contentHt="430" />
+    <item source="pages/res/terasaki/terasaki04.jpg" contentSize="609" contentHt="430" />
+    <item source="pages/res/terasaki/terasaki05.jpg" contentSize="674" contentHt="430" />
+  </data>
+</component>

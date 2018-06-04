@@ -1,0 +1,58 @@
+.page.gateway-page {
+    height: 50%;
+
+    .gateway-page-button, .gateway-page-gallery {
+        align-self: end;
+        flex: 1;
+        flex-grow: 1;
+        padding: 0 2%;
+    }
+
+    .gateway-page-button {
+        color: white;
+        text-align: center;
+
+        .gateway-page-desc {
+            color: grey;
+        }
+
+        .gateway-page-desc, .gateway-page-name {
+            height: 20px;
+            margin: 0 auto;
+        }
+
+        .gateway-page-desc {
+            font-size: 10px;
+        }
+
+        .gateway-page-map {
+            background: url("../../media/gateway/map.jpg");
+            background-size: cover;
+            border: 2px solid grey;
+            height: 300px;
+            margin: 0 auto;
+            width: 300px;
+            
+            .gateway-page-map-button {
+                background-color: red;
+                height: 30%;
+                width: 30%;
+
+                .gateway-page-map-button-enter a {
+                    color: white;
+                    text-decoration: none;
+                }
+            }
+        }
+
+        .gateway-page-map, .gateway-page-map-button, {
+            align-items: center;
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .gateway-page-gallery {
+        width: 410px;
+    }
+}

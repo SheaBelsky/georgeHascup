@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/ind/powerplant/powerplant01.jpg" contentSize="584" />
+    <item source="pages/ind/powerplant/powerplant02.jpg" contentSize="700" />
+    <item source="pages/ind/powerplant/powerplant03.jpg" contentSize="643" />
+    <item source="pages/ind/powerplant/powerplant04.jpg" contentSize="595" />
+    <item source="pages/ind/powerplant/powerplant05.jpg" contentSize="700" />
+    <item source="pages/ind/powerplant/powerplant06.jpg" contentSize="700" />
+    <item source="pages/ind/powerplant/powerplant07.jpg" contentSize="700" />
+    <item source="pages/ind/powerplant/powerplant08.jpg" contentSize="700" />
+    <item source="pages/ind/powerplant/powerplant09.jpg" contentSize="700" />
+    <item source="pages/ind/powerplant/powerplant10.jpg" contentSize="332" />
+    <item source="pages/ind/powerplant/powerplant11.jpg" contentSize="342" />
+  </data>
+</component>

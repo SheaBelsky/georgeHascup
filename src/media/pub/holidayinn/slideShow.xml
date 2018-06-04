@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/pub/holidayinn/holidayinn01.jpg" contentSize="800" />
+    <item source="pages/pub/holidayinn/holidayinn02.jpg" contentSize="295" />
+    <item source="pages/pub/holidayinn/holidayinn03.jpg" contentSize="303" />
+    <item source="pages/pub/holidayinn/holidayinn04.jpg" contentSize="800" />
+    <item source="pages/pub/holidayinn/holidayinn05.jpg" contentSize="306" />
+    <item source="pages/pub/holidayinn/holidayinn06.jpg" contentSize="277" />
+  </data>
+</component>

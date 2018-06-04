@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/pub/plantations/plantations01.jpg" contentSize="636" />
+    <item source="pages/pub/plantations/plantations02.jpg" contentSize="646" />
+    <item source="pages/pub/plantations/plantations03.jpg" contentSize="800" />
+    <item source="pages/pub/plantations/plantations04.jpg" contentSize="608" />
+    <item source="pages/pub/plantations/plantations05.jpg" contentSize="598" />
+    <item source="pages/pub/plantations/plantations06.jpg" contentSize="641" />
+    <item source="pages/pub/plantations/plantations07.jpg" contentSize="637" />
+  </data>
+</component>

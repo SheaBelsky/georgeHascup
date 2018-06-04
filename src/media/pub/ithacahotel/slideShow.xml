@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/pub/ithacahotel/ithacahotel01.jpg" contentSize="800" />
+    <item source="pages/pub/ithacahotel/ithacahotel02.jpg" contentSize="800" />
+    <item source="pages/pub/ithacahotel/ithacahotel03.jpg" contentSize="483" />
+    <item source="pages/pub/ithacahotel/ithacahotel04.jpg" contentSize="712" />
+    <item source="pages/pub/ithacahotel/ithacahotel05.jpg" contentSize="738" />
+    <item source="pages/pub/ithacahotel/ithacahotel06.jpg" contentSize="575" />
+    <item source="pages/pub/ithacahotel/ithacahotel07.jpg" contentSize="497" />
+    <item source="pages/pub/ithacahotel/ithacahotel08.jpg" contentSize="541" />
+    <item source="pages/pub/ithacahotel/ithacahotel09.jpg" contentSize="579" />
+    <item source="pages/pub/ithacahotel/ithacahotel10.jpg" contentSize="431" />
+    <item source="pages/pub/ithacahotel/ithacahotel11.jpg" contentSize="333" />
+    <item source="pages/pub/ithacahotel/ithacahotel12.jpg" contentSize="584" />
+    <item source="pages/pub/ithacahotel/ithacahotel13.jpg" contentSize="537" />
+    <item source="pages/pub/ithacahotel/ithacahotel14.jpg" contentSize="321" />
+  </data>
+</component>

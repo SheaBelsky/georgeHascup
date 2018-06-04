@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<component name="XmlSlideShowV3">
+  <data>
+    <item source="pages/pub/folkartguild/folkartguild01.jpg" contentSize="800" />
+    <item source="pages/pub/folkartguild/folkartguild02.jpg" contentSize="352" />
+    <item source="pages/pub/folkartguild/folkartguild03.jpg" contentSize="644" />
+    <item source="pages/pub/folkartguild/folkartguild04.jpg" contentSize="583" />
+    <item source="pages/pub/folkartguild/folkartguild05.jpg" contentSize="316" />
+    <item source="pages/pub/folkartguild/folkartguild06.jpg" contentSize="692" />
+  </data>
+</component>
