@@ -16,7 +16,7 @@ import RegisterServiceWorker from "./RegisterServiceWorker";
 
 ReactDOM.render(
     <BrowserRouter>
-        <div>
+        <div id={"page-container"}>
             <Route exact path={"/"}     component={ Gateway }></Route>
             <Route exact path={"/home"} component={ Home }></Route>
         </div>
