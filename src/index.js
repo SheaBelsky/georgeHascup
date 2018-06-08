@@ -15,7 +15,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 //import RegisterServiceWorker from "./RegisterServiceWorker";
 
 ReactDOM.render(
-    <BrowserRouter>
+    <BrowserRouter basename={"/georgeHascup"}>
         <div id={"page-container"}>
             <Route exact path={"/"}     component={ Gateway }></Route>
             <Route exact path={"/home"} component={ Home }></Route>
