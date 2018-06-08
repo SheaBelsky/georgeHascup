@@ -12,7 +12,7 @@ import "./styles/index.less";
 import "react-image-gallery/styles/css/image-gallery.css";
 
 // Other imports
-import RegisterServiceWorker from "./RegisterServiceWorker";
+//import RegisterServiceWorker from "./RegisterServiceWorker";
 
 ReactDOM.render(
     <BrowserRouter>
@@ -24,4 +24,4 @@ ReactDOM.render(
     document.getElementById("root")
 );
 
-RegisterServiceWorker();
+//RegisterServiceWorker();
