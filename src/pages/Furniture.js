@@ -3,7 +3,7 @@ import ImageGallery from "react-image-gallery";
 import { Link } from "react-router-dom";
 
 // CSS
-//import "../styles/pages/furniture.less";
+import "../styles/pages/furniture.less";
 
 // Images
 let images = [];

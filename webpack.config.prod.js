@@ -17,7 +17,7 @@ module.exports = {
     entry: `${__dirname}/src/index.js`,
     output: {
         path: `${__dirname}/docs`,
-        publicPath: "/georgeHascup",
+        publicPath: "https://sheabelsky.github.io/georgeHascup/img/",
         filename: "js/bundle.js",
     },
     devServer: {
