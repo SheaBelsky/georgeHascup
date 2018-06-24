@@ -1,7 +1,7 @@
 // Node module imports
 import React    from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, HashHistory, Route } from "react-router-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 // Component imports
 import Furniture from "./pages/Furniture";
@@ -16,7 +16,7 @@ import "react-image-gallery/styles/css/image-gallery.css";
 //import RegisterServiceWorker from "./RegisterServiceWorker";
 
 ReactDOM.render(
-    <BrowserRouter basename={process.env.PUBLIC_URL}>
+    <BrowserRouter basename={"/georgeHascup/"}>
         <div id={"page-container"}>
             <Route exact path={"/"}     component={ Gateway }></Route>
             <Route exact path={"/home"} component={ Home }></Route>
