@@ -49,7 +49,7 @@ class Home extends Component {
                                 <Link to={"#"}>Industrial</Link>
                             </li>
                             <li>
-                                <Link to={"#"}>Furniture</Link>
+                                <Link to={"/furniture"}>Furniture</Link>
                             </li>
                             <li>
                                 <Link to={"#"}>Profile/Contact</Link>
