@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import ImageGallery from "react-image-gallery";
 import { Link } from "react-router-dom";
 
+import Navigation from "./../partials/Navigation";
+
 // CSS
 import "../styles/pages/furniture.less";
 
@@ -18,16 +20,22 @@ for (let i = 1; i < 85; i++) {
 class Home extends Component {
     render () {
         return (
-            <div className={"furn-page page"}>
-                <ImageGallery
-                    autoPlay=             { true }
-                    className=            { "furniture-gallery" }
-                    items=                { images }
-                    showFullscreenButton= { false }
-                    showPlayButton=       { false }
-                    showNav=              { true }
-                    showThumbnails=       { true }
-                />
+            <div>
+                <Navigation />
+                <div className={"furn-page page"}>
+                
+                    <div className={"furniture-gallery-container"}>
+                        <ImageGallery
+                            autoPlay=             { true }
+                            additionalClass=      { "furniture-gallery" }
+                            items=                { images }
+                            showFullscreenButton= { false }
+                            showPlayButton=       { false }
+                            showNav=              { true }
+                            showThumbnails=       { true }
+                        />
+                    </div>
+                </div>
             </div>
         );
     }

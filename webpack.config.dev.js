@@ -17,7 +17,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, "docs"),
         historyApiFallback: true,
-        open: true,
+        //open: true,
         port: 3000
     },
     devtool: "eval-source-map",
