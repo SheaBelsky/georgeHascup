@@ -11,6 +11,11 @@ const homeImage3 = require("../media/home/fingerlakes_crop_2.jpg");
 const homeImage4 = require("../media/home/fingerlakes_crop_3.jpg");
 const homeImage5 = require("../media/home/lakepanorama_half.jpg");
 
+// PDFs
+const hascupComplete = require("../media/profile/hascupComplete.pdf");
+const hascupMonogram = require("../media/profile/hascupMonogram.pdf");
+const hascupVilla = require("../media/profile/hascupVilla.pdf");
+
 const images = [
     { original: homeImage1 },
     { original: homeImage2 },
@@ -33,30 +38,55 @@ class Navigation extends Component {
                     showThumbnails=       { false }
                 />
                 <div className={"nav-name"}>
-                    HASCUP ARCHITECTURE
+                    <Link to={"/home"}>HASCUP ARCHITECTURE</Link>
                 </div>
                 <div className={"nav-container"}>
-                    <ul>
+                    <ul className={"left-nav"}>
                         <li>
                             <Link to={"#"}>Residential</Link>
                         </li>
+                        <Square />
                         <li>
                             <Link to={"#"}>Public Realm</Link>
                         </li>
+                        <Square />
                         <li>
                             <Link to={"#"}>Industrial</Link>
                         </li>
+                        <Square />
                         <li>
                             <Link to={"/furniture"}>Furniture</Link>
                         </li>
+                        <Square />
                         <li>
                             <Link to={"#"}>Profile/Contact</Link>
+                        </li>
+                    </ul>
+                    <ul className={"right-nav"}>
+                        <li>
+                            <a href={hascupComplete}>Complete Works</a>
+                        </li>
+                        <Square />
+                        <li>
+                            <a href={hascupMonogram}>Monogram</a>
+                        </li>
+                        <Square />
+                        <li>
+                            <a href={hascupVilla}>Villa Adrianica</a>
                         </li>
                     </ul>
                 </div>
             </div>
         );
     }
+}
+
+function Square() {
+    return (
+        <div className={"square"}>
+            ■
+        </div>
+    );
 }
 
 export default Navigation;

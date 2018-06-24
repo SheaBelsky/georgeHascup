@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import ImageGallery from "react-image-gallery";
-import { Link } from "react-router-dom";
 
 import Navigation from "./../partials/Navigation";
 
@@ -26,7 +25,7 @@ class Home extends Component {
                 
                     <div className={"furniture-gallery-container"}>
                         <ImageGallery
-                            autoPlay=             { true }
+                            autoPlay=             { false }
                             additionalClass=      { "furniture-gallery" }
                             items=                { images }
                             showFullscreenButton= { false }
