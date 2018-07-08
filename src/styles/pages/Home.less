@@ -1,23 +1,15 @@
 @import './../variables.less';
 
 .page.home-page {
-    height: 100%;
+    height: calc(100% - 179px);
 
-    .home-splash, .home-top {
-        position: absolute;
+    .home-splash {
         width: 100%;
     }
 
     .home-splash {
         background: url("../../media/home/viewpersp.jpg");
         background-size: cover;
-        bottom: 0;
-        height: 80%;
-    }
-
-    .home-top {
-        border-bottom: 2px solid @border-color;
-        height: 20%;
-        top: 0;
+        height: 100%;
     }
 }
