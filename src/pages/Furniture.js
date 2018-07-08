@@ -16,7 +16,7 @@ for (let i = 1; i < 85; i++) {
     });
 }
 
-class Home extends Component {
+class Furniture extends Component {
     render () {
         return (
             <div>
@@ -40,4 +40,4 @@ class Home extends Component {
     }
 } 
 
-export default Home;
+export default Furniture;

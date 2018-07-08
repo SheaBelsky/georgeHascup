@@ -1,10 +1,12 @@
+@gallery-width: 700px;
+
 .furn-page.page {
     height: 80%;
 
     .furniture-gallery-container {
         .furniture-gallery {
             height: 300px;
-            width: 500px;
+            width: @gallery-width;
         }
     }
 
@@ -16,7 +18,7 @@
             display: block;
             margin: auto;
             max-height: 500px;
-            max-width: 500px;
+            max-width: @gallery-width;
             width: unset;
         }
     }

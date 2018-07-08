@@ -36,6 +36,7 @@ class Navigation extends Component {
                     showPlayButton=       { false }
                     showNav=              { false }
                     showThumbnails=       { false }
+                    renderCustomControls= { this.customControls }
                 />
                 <div className={"nav-name"}>
                     <Link to={"/home"}>HASCUP ARCHITECTURE</Link>
@@ -43,7 +44,7 @@ class Navigation extends Component {
                 <div className={"nav-container"}>
                     <ul className={"left-nav"}>
                         <li>
-                            <Link to={"#"}>Residential</Link>
+                            <Link to={"/residential"}>Residential</Link>
                         </li>
                         <Square />
                         <li>
@@ -64,15 +65,15 @@ class Navigation extends Component {
                     </ul>
                     <ul className={"right-nav"}>
                         <li>
-                            <a href={hascupComplete}>Complete Works</a>
+                            <a href={hascupComplete} target={"blank"}>Complete Works</a>
                         </li>
                         <Square />
                         <li>
-                            <a href={hascupMonogram}>Monogram</a>
+                            <a href={hascupMonogram} target={"blank"}>Monogram</a>
                         </li>
                         <Square />
                         <li>
-                            <a href={hascupVilla}>Villa Adrianica</a>
+                            <a href={hascupVilla} target={"blank"}>Villa Adrianica</a>
                         </li>
                     </ul>
                 </div>

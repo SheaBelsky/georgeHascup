@@ -17,11 +17,22 @@ body, #root {
 }
 
 #root, .page {
-    align-items: center;
+    align-items: flex-end;
     display: flex;
     justify-content: center;
+    margin: 0;
 }
 
 #page-container {
+    align-items: center;
+    display: flex;
     font-family: 'Titillium Web', sans-serif;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+
+    & > div {
+        height: 100%;
+        width: 100%;
+    }
 }
