@@ -14,8 +14,7 @@ imageNames.forEach((curImageName) => {
     const lowerCaseName = curImageName.toLowerCase();
     images.push({
         key: lowerCaseName,
-        original: require(`../media/res/${lowerCaseName}/${lowerCaseName}01.jpg`),
-        thumbnail: require(`../media/res/${lowerCaseName}/${lowerCaseName}01sm.jpg`)
+        original: require(`../media/res/${lowerCaseName}/${lowerCaseName}01.jpg`)
     });
 });
 
