@@ -12,7 +12,8 @@ class VerticalColumn extends Component {
                     images.map((curImage) => {
                         return (
                             <VerticalImage 
-                                key={curImage.key} 
+                                key={curImage.key}
+                                label={curImage.key}
                                 src={curImage.original} 
                                 resetImage={resetImage}
                                 changeImage={changeImage}
@@ -28,43 +29,48 @@ class VerticalColumn extends Component {
 class VerticalImage extends Component {
     handleMouseEnter = (e) => {
         const { changeImage } = this.props;
-        changeImage(e.target.src);
+        const { target: element } = e;
+        const { alt, src } = element;
+        changeImage(alt, src);
     }
     handleMouseLeave = () => {
         const { resetImage } = this.props;
         resetImage();
     }
     render() {
-        const { src: imageSrc } = this.props;
+        const { label, src: imageSrc } = this.props;
         return (
             <div 
                 className="image-thumbnail"
                 onMouseEnter={this.handleMouseEnter}
-                onMouseLeave={this.handleMouseLeave}
+                //onMouseLeave={this.handleMouseLeave}
             >
-                <img src={imageSrc} />
+                <img alt={label} src={imageSrc} />
             </div>
         );
     }
 }
 
 class VerticalImageLadder extends Component {
-    changeImage = (newImage) => {
+    changeImage = (label, src) => {
         this.setState({
-            image: newImage
+            image: src,
+            label: label
         });
     }
 
     resetImage = () => {
         this.setState({
-            image: null
+            image: null,
+            label: null
         });
     }
 
     constructor(props) {
         super(props);
         this.state = {
-            image: null
+            image: null,
+            label: null
         };
     }
 
@@ -76,7 +82,6 @@ class VerticalImageLadder extends Component {
             splitImages.push(images.slice(i, i + incrementor));
         }
         let columnNum = 0;
-        console.log(this.state.image);
         return (
             <div className={"vertical-image-container"}>
                 <div className={"vertical-image-ladder"}>
@@ -98,6 +103,9 @@ class VerticalImageLadder extends Component {
                     {this.state.image !== null &&
                         <img src={this.state.image} />
                     }
+                    <div className={"image-preview-label"}>
+                        {this.state.label !== null && this.state.label}
+                    </div>
                 </div>
             </div>
         );
