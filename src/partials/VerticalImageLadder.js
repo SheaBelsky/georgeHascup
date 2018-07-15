@@ -17,11 +17,14 @@ class VerticalImage extends Component {
     }
     render() {
         const { image: {label, link, original: src} } = this.props;
+        const imageLink = typeof link !== "undefined"
+            ? `${window.location}/${link}`
+            : undefined;
         return (
             <a 
                 className="image-thumbnail"
                 onMouseEnter={this.handleMouseEnter}
-                href={`${window.location}/${link}`}
+                href={imageLink}
                 key={src}
             >
                 <img alt={label} src={src} key={src}/>
