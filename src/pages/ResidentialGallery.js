@@ -14,6 +14,9 @@ let imageMap = {
     "booth": {
         num: 7
     },
+    "corningtennis": {
+        num: 23
+    },
     "cowie": {
         num: 9
     },

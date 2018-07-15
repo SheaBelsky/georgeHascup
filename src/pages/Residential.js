@@ -7,7 +7,7 @@ import VerticalImageLadder from "./../partials/VerticalImageLadder";
 import "../styles/pages/Residential.less";
 
 // Images
-const imageNames = ["Abrams", "Booth", "Cowie", "Dicicco", "Dyckman", "Krumhansel", "Miller", "Randel",
+const imageNames = ["Abrams", "Booth", "Corningtennis", "Cowie", "Dicicco", "Dyckman", "Krumhansel", "Miller", "Randel",
     "Sampson", "Sears", "Terasaki", "Wilson"];
 let images = [];
 imageNames.forEach((curImageName) => {
