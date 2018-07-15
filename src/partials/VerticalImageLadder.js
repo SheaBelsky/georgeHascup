@@ -1,30 +1,8 @@
 import React, { Component } from "react";
+import { Link } from "react-router";
 import PropTypes from "prop-types";
 
 import "../styles/partials/VerticalImageLadder.less";
-
-class VerticalColumn extends Component {
-    render() {
-        const { changeImage, images, resetImage } = this.props;
-        return (
-            <div className={"image-column"}>
-                {
-                    images.map((curImage) => {
-                        return (
-                            <VerticalImage 
-                                key={curImage.key}
-                                label={curImage.key}
-                                src={curImage.original} 
-                                resetImage={resetImage}
-                                changeImage={changeImage}
-                            />
-                        );
-                    })
-                }
-            </div>
-        );
-    }
-}
 
 class VerticalImage extends Component {
     handleMouseEnter = (e) => {
@@ -38,14 +16,37 @@ class VerticalImage extends Component {
         resetImage();
     }
     render() {
-        const { label, src: imageSrc } = this.props;
+        const { image: {label, link, original: src} } = this.props;
         return (
-            <div 
+            <a 
                 className="image-thumbnail"
                 onMouseEnter={this.handleMouseEnter}
+                href={link}
+                key={src}
                 //onMouseLeave={this.handleMouseLeave}
             >
-                <img alt={label} src={imageSrc} />
+                <img alt={label} src={src} key={src}/>
+            </a>
+        );
+    }
+}
+
+class VerticalColumn extends Component {
+    render() {
+        const { changeImage, images, resetImage } = this.props;
+        return (
+            <div className={"image-column"}>
+                {
+                    images.map((image) => {
+                        return (
+                            <VerticalImage 
+                                image={image}
+                                resetImage={resetImage}
+                                changeImage={changeImage}
+                            />
+                        );
+                    })
+                }
             </div>
         );
     }

@@ -8,6 +8,7 @@ import Furniture   from "./pages/Furniture";
 import Gateway     from "./pages/Gateway";
 import Home        from "./pages/Home";
 import Residential from "./pages/Residential";
+import ResidentialGallery from "./pages/ResidentialGallery";
 
 // CSS import
 import "./styles/index.less";
@@ -19,10 +20,11 @@ import "react-image-gallery/styles/css/image-gallery.css";
 ReactDOM.render(
     <HashRouter basename={process.env.PUBLIC_URL}>
         <div id={"page-container"}>
-            <Route exact path={"/"}            component={ Gateway }></Route>
-            <Route exact path={"/home"}        component={ Home }></Route>
-            <Route exact path={"/furniture"}   component={ Furniture }></Route>
-            <Route exact path={"/residential"} component={ Residential }></Route>
+            <Route exact path={"/"}                 component={ Gateway }></Route>
+            <Route exact path={"/home"}             component={ Home }></Route>
+            <Route exact path={"/furniture"}        component={ Furniture }></Route>
+            <Route exact path={"/residential/:key?"} component={ Residential }></Route>
+            <Route exact path={"/residential/gallery/:key"} component={ ResidentialGallery }></Route>
         </div>
     </HashRouter>,
     document.getElementById("root")

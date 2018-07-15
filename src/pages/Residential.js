@@ -14,7 +14,8 @@ imageNames.forEach((curImageName) => {
     const lowerCaseName = curImageName.toLowerCase();
     images.push({
         key: lowerCaseName,
-        original: require(`../media/res/${lowerCaseName}/${lowerCaseName}01.jpg`)
+        original: require(`../media/res/${lowerCaseName}/${lowerCaseName}01.jpg`),
+        link: `/#/residential/gallery/${lowerCaseName}/`,
     });
 });
 
@@ -29,6 +30,6 @@ class Residential extends Component {
             </div>
         );
     }
-} 
+}
 
 export default Residential;
