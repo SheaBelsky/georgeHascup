@@ -21,9 +21,8 @@ class VerticalImage extends Component {
             <a 
                 className="image-thumbnail"
                 onMouseEnter={this.handleMouseEnter}
-                href={link}
+                href={`${window.location}/${link}`}
                 key={src}
-                //onMouseLeave={this.handleMouseLeave}
             >
                 <img alt={label} src={src} key={src}/>
             </a>

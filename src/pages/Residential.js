@@ -15,7 +15,7 @@ imageNames.forEach((curImageName) => {
     images.push({
         key: lowerCaseName,
         original: require(`../media/res/${lowerCaseName}/${lowerCaseName}01.jpg`),
-        link: `/#/residential/gallery/${lowerCaseName}/`,
+        link: `gallery/${lowerCaseName}/`,
     });
 });
 
