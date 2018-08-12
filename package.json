@@ -20,42 +20,60 @@
     "homepage": "https://github.com/SheaBelsky/georgeHascup#readme",
     "dependencies": {
         "prop-types": "^15.6.2",
-        "react": "^16.4.0",
-        "react-dom": "^16.4.0",
+        "react": "^16.4.2",
+        "react-dom": "^16.4.2",
         "react-grid-gallery": "^0.4.11",
-        "react-image-gallery": "^0.8.8",
-        "react-router-dom": "^4.2.2"
+        "react-image-gallery": "^0.8.10",
+        "react-router-dom": "^4.3.1"
     },
     "devDependencies": {
-        "@babel/core": "^7.0.0-beta.49",
-        "@babel/preset-env": "^7.0.0-beta.49",
-        "@babel/preset-react": "^7.0.0-beta.49",
-        "@babel/preset-stage-2": "^7.0.0-beta.49",
-        "babel-loader": "^8.0.0-beta.3",
+        "@babel/core": "^7.0.0-rc.1",
+        "@babel/plugin-proposal-class-properties": "7.0.0-beta.54",
+        "@babel/plugin-proposal-decorators": "7.0.0-beta.54",
+        "@babel/plugin-proposal-export-namespace-from": "7.0.0-beta.54",
+        "@babel/plugin-proposal-function-sent": "7.0.0-beta.54",
+        "@babel/plugin-proposal-json-strings": "7.0.0-beta.54",
+        "@babel/plugin-proposal-numeric-separator": "7.0.0-beta.54",
+        "@babel/plugin-proposal-throw-expressions": "7.0.0-beta.54",
+        "@babel/plugin-syntax-dynamic-import": "7.0.0-beta.54",
+        "@babel/plugin-syntax-import-meta": "7.0.0-beta.54",
+        "@babel/preset-env": "^7.0.0-rc.1",
+        "@babel/preset-react": "^7.0.0-rc.1",
+        "babel-loader": "^8.0.0-beta.0",
         "css-loader": "^0.28.11",
         "extract-text-webpack-plugin": "^4.0.0-beta.0",
         "file-loader": "^1.1.11",
         "img-loader": "^3.0.0",
-        "less": "^3.0.4",
+        "less": "^3.8.1",
         "less-loader": "^4.1.0",
-        "optimize-css-assets-webpack-plugin": "^4.0.2",
+        "optimize-css-assets-webpack-plugin": "^4.0.3",
         "style-loader": "^0.21.0",
         "sw-precache-webpack-plugin": "^0.11.5",
         "url-loader": "^1.0.1",
-        "webpack": "^4.10.2",
-        "webpack-cli": "^3.0.1",
-        "webpack-dev-server": "^3.1.4"
+        "webpack": "^4.16.5",
+        "webpack-cli": "^3.1.0",
+        "webpack-dev-server": "^3.1.5"
     },
     "babel": {
         "presets": [
             "@babel/preset-env",
+            "@babel/react"
+        ],
+        "plugins": [
+            "@babel/plugin-syntax-dynamic-import",
+            "@babel/plugin-syntax-import-meta",
+            "@babel/plugin-proposal-class-properties",
+            "@babel/plugin-proposal-json-strings",
             [
-                "@babel/preset-stage-2",
+                "@babel/plugin-proposal-decorators",
                 {
-                    "decoratorsLegacy": true
+                    "legacy": true
                 }
             ],
-            "@babel/react"
+            "@babel/plugin-proposal-function-sent",
+            "@babel/plugin-proposal-export-namespace-from",
+            "@babel/plugin-proposal-numeric-separator",
+            "@babel/plugin-proposal-throw-expressions"
         ]
     }
 }

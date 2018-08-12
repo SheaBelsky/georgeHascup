@@ -1,9 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8"?>
-<component name="XmlSlideShowV3">
-  <data>
-    <item source="pages/pub/golf/golf01.jpg" contentSize="800" />
-    <item source="pages/pub/golf/golf02.jpg" contentSize="800" />
-    <item source="pages/pub/golf/golf03.jpg" contentSize="683" />
-    <item source="pages/pub/golf/golf04.jpg" contentSize="800" />
-  </data>
-</component>

@@ -16,8 +16,7 @@ class Home extends Component {
                     <div className={"home-splash"}>
                     </div>
                 </div>
-            </div>
-           
+            </div> 
         );
     }
 } 

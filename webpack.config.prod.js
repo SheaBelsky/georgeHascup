@@ -66,7 +66,7 @@ module.exports = {
                     {
                         loader: "file-loader?limit=100000",
                         options: {
-                            name: "img/[hash].[ext]"
+                            name: "img/[name].[ext]"
                         }
                     },
                     "img-loader"

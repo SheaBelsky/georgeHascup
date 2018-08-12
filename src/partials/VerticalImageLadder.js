@@ -33,27 +33,6 @@ class VerticalImage extends Component {
     }
 }
 
-class VerticalColumn extends Component {
-    render() {
-        const { changeImage, images, resetImage } = this.props;
-        return (
-            <div className={"image-column"}>
-                {
-                    images.map((image) => {
-                        return (
-                            <VerticalImage 
-                                image={image}
-                                resetImage={resetImage}
-                                changeImage={changeImage}
-                            />
-                        );
-                    })
-                }
-            </div>
-        );
-    }
-}
-
 class VerticalImageLadder extends Component {
     changeImage = (label, src) => {
         this.setState({
@@ -79,22 +58,14 @@ class VerticalImageLadder extends Component {
 
     render() {
         const { images } = this.props;
-        const incrementor = images.length / 3;
-        let splitImages = [];
-        for (let i = 0; i < images.length; i += incrementor) {
-            splitImages.push(images.slice(i, i + incrementor));
-        }
-        let columnNum = 0;
         return (
             <div className={"vertical-image-container"}>
                 <div className={"vertical-image-ladder"}>
                     {
-                        splitImages.map((curColumn) => {
-                            columnNum++;
+                        images.map((image) => {
                             return (
-                                <VerticalColumn 
-                                    key={columnNum} 
-                                    images={curColumn}
+                                <VerticalImage 
+                                    image={image}
                                     resetImage={this.resetImage}
                                     changeImage={this.changeImage}
                                 />

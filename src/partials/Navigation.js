@@ -48,11 +48,11 @@ class Navigation extends Component {
                         </li>
                         <Square />
                         <li>
-                            <Link to={"#"}>Public Realm</Link>
+                            <Link to={"/public"}>Public Realm</Link>
                         </li>
                         <Square />
                         <li>
-                            <Link to={"#"}>Industrial</Link>
+                            <Link to={"/industrial"}>Industrial</Link>
                         </li>
                         <Square />
                         <li>
