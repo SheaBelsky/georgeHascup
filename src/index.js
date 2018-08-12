@@ -20,6 +20,9 @@ import "react-image-gallery/styles/css/image-gallery.css";
 // Other imports
 //import RegisterServiceWorker from "./RegisterServiceWorker";
 
+// TODO: Render nav outside of the router so the image gallery doesn't jump from one page to the next
+// Need to do something special with home page where it won't render
+
 ReactDOM.render(
     <HashRouter basename={process.env.PUBLIC_URL}>
         <div id={"page-container"}>

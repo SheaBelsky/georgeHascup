@@ -1,8 +1,8 @@
 {
     "name": "george-hascup-portfolio",
     "version": "1.0.0",
-    "description": "",
     "main": "index.js",
+    "description": "Portfolio for George Hascup Architecture",
     "scripts": {
         "start": "webpack-dev-server --config webpack.config.dev.js",
         "build": "webpack --progress --config webpack.config.prod.js"
@@ -13,7 +13,7 @@
     },
     "keywords": [],
     "author": "",
-    "license": "ISC",
+    "license": "MIT",
     "bugs": {
         "url": "https://github.com/SheaBelsky/georgeHascup/issues"
     },
