@@ -14,6 +14,8 @@ const gatewayImage5 = require("../media/gateway/5.jpg");
 const gatewayImage6 = require("../media/gateway/6.jpg");
 const gatewayImage7 = require("../media/gateway/7.jpg");
 
+// TODO: Fix jump in first image?
+
 export default class Gateway extends Component {
     render () {
         const images = [

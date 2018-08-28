@@ -65,11 +65,11 @@ class Navigation extends Component {
                     </ul>
                     <ul className={"right-nav"}>
                         <li>
-                            <a href={hascupComplete} target={"blank"}>Complete Works</a>
+                            <a href={hascupMonogram} target={"blank"}>Complete Works</a>
                         </li>
                         <Square />
                         <li>
-                            <a href={hascupMonogram} target={"blank"}>Monogram</a>
+                            <a href={hascupComplete} target={"blank"}>Monogram</a>
                         </li>
                         <Square />
                         <li>
