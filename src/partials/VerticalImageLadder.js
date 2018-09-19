@@ -8,15 +8,22 @@ class VerticalImage extends Component {
     handleMouseEnter = (e) => {
         const { changeImage } = this.props;
         const { target: element } = e;
-        const { alt, src } = element;
-        changeImage(alt, src);
+        if (element.childNodes.length > 0) {
+            const childElement = element.childNodes[0];
+            const { name, src } = childElement;
+            changeImage(name, src);
+        }
+        else {
+            const { name, src } = element;
+            changeImage(name, src);
+        }
     }
     handleMouseLeave = () => {
         const { resetImage } = this.props;
         resetImage();
     }
     render() {
-        const { image: {label, link, original: src} } = this.props;
+        const { image: {name, link, original: src} } = this.props;
         const imageLink = typeof link !== "undefined"
             ? `${window.location}/${link}`
             : undefined;
@@ -27,7 +34,8 @@ class VerticalImage extends Component {
                 href={imageLink}
                 key={src}
             >
-                <img alt={label} src={src} key={src}/>
+                <img alt={name} src={src} key={src}/>
+                <div className="image-label">{name}</div>
             </a>
         );
     }

@@ -7,16 +7,17 @@ import VerticalImageLadder from "./../partials/VerticalImageLadder";
 import "../styles/pages/Residential.less";
 
 // Images
-const imageNames = ["bigredbarn", "chambercommerce", "childcare", "ciaschi", "corningbridge", "corningpavilion",
-    "folkartguild", "golf", "holidayinn", "ithacahotel", "mentalhealth", "plantations", "rpiengineering",
-    "tchospital", "youthbureau"];
+const imageNames = ["big red barn", "chamber commerce", "childcare", "ciaschi", "corning bridge", "corning pavilion",
+    "folk art guild", "golf", "holiday inn", "ithaca hotel", "mental health", "plantations", "rpi engineering",
+    "tc hospital", "youth bureau"];
 let images = [];
 imageNames.forEach((curImageName) => {
-    const lowerCaseName = curImageName.toLowerCase();
+    const lowerCaseName = curImageName.replace(/ /g, "").toLowerCase();
     images.push({
         key: lowerCaseName,
-        original: require(`../media/pub/${lowerCaseName}/${lowerCaseName}01.jpg`),
+        original: require(`../media/pub/${lowerCaseName}/${lowerCaseName}00.jpg`),
         link: `gallery/${lowerCaseName}/`,
+        name: curImageName
     });
 });
 
@@ -26,7 +27,7 @@ class Industrial extends Component {
             <div>
                 <Navigation />
                 <div className={"res-page page"}>
-                    <VerticalImageLadder images={images} />
+                    <VerticalImageLadder images={images} startIndex={0} />
                 </div>
             </div>
         );
