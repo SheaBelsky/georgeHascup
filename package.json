@@ -4,8 +4,8 @@
     "main": "index.js",
     "description": "Portfolio for George Hascup Architecture",
     "scripts": {
-        "start": "webpack-dev-server --config webpack.config.dev.js",
-        "build": "webpack --progress --config webpack.config.prod.js"
+        "start": "./node_modules/.bin/webpack-dev-server --config webpack.config.dev.js",
+        "build": "./node_modules/.bin/webpack --progress --config webpack.config.prod.js"
     },
     "repository": {
         "type": "git",

@@ -16,6 +16,7 @@ imageNames.forEach((curImageName) => {
         key: lowerCaseName,
         original: require(`../media/res/${lowerCaseName}/${lowerCaseName}01.jpg`),
         link: `gallery/${lowerCaseName}/`,
+        map: require(`../media/res/${lowerCaseName}/${lowerCaseName}Map.png`),
         name: curImageName
     });
 });
@@ -26,7 +27,7 @@ class Residential extends Component {
             <div>
                 <Navigation />
                 <div className={"res-page page"}>
-                    <VerticalImageLadder images={images} />
+                    <VerticalImageLadder images={images} type="residentialHome"/>
                 </div>
             </div>
         );

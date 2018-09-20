@@ -6,15 +6,17 @@ import "../styles/partials/VerticalImageLadder.less";
 
 class VerticalImage extends Component {
     handleMouseEnter = (e) => {
-        const { changeImage } = this.props;
+        const { changeImage, image, type } = this.props;
+        const { map } = image;
         const { target: element } = e;
-        if (element.childNodes.length > 0) {
-            const childElement = element.childNodes[0];
-            const { name, src } = childElement;
-            changeImage(name, src);
+        let newElement = element.childNodes.length > 0
+            ? element.childNodes[0]
+            : element;
+        const { name, src } = newElement;
+        if (type === "residentialHome") {
+            changeImage(name, map);
         }
         else {
-            const { name, src } = element;
             changeImage(name, src);
         }
     }
@@ -23,7 +25,13 @@ class VerticalImage extends Component {
         resetImage();
     }
     render() {
-        const { image: {name, link, original: src} } = this.props;
+        const { 
+            image: {
+                name, 
+                link, 
+                original: src
+            } 
+        } = this.props;
         const imageLink = typeof link !== "undefined"
             ? `${window.location}/${link}`
             : undefined;
@@ -65,7 +73,7 @@ class VerticalImageLadder extends Component {
     }
 
     render() {
-        const { images } = this.props;
+        const { images, type } = this.props;
         return (
             <div className={"vertical-image-container"}>
                 <div className={"vertical-image-ladder"}>
@@ -76,6 +84,7 @@ class VerticalImageLadder extends Component {
                                     image={image}
                                     resetImage={this.resetImage}
                                     changeImage={this.changeImage}
+                                    type={type}
                                 />
                             );
                         })
