@@ -25,7 +25,9 @@ class Public extends Component {
     render () {
         return (
             <div>
-                <Navigation />
+                <Navigation 
+                    navigationSubtitle="Public Realm"
+                />
                 <div className={"res-page page"}>
                     <VerticalImageLadder images={images} startIndex={0} type="landing" />
                 </div>

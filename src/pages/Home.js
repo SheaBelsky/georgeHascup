@@ -11,7 +11,9 @@ class Home extends Component {
     render () {
         return (
             <div>
-                <Navigation />
+                <Navigation 
+                    navigationSubtitle="Home"
+                />
                 <div className={"home-page page"}>
                     <div className={"home-splash"}>
                     </div>
