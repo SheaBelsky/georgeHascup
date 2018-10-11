@@ -15,6 +15,7 @@ imageNames.forEach((curImageName) => {
         key: lowerCaseName,
         original: require(`../media/pub/${lowerCaseName}/${lowerCaseName}00.jpg`),
         link: `gallery/${lowerCaseName}/`,
+        map: require(`../media/pub/${lowerCaseName}/${lowerCaseName}Map.png`),
         name: curImageName
     });
 });
@@ -26,7 +27,7 @@ class Public extends Component {
             <div>
                 <Navigation />
                 <div className={"res-page page"}>
-                    <VerticalImageLadder images={images} startIndex={0} />
+                    <VerticalImageLadder images={images} startIndex={0} type="landing" />
                 </div>
             </div>
         );
