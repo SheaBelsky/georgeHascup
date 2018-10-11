@@ -7,9 +7,7 @@ import VerticalImageLadder from "./../partials/VerticalImageLadder";
 import "../styles/pages/Residential.less";
 
 // Images
-const imageNames = ["big red barn", "chamber commerce", "childcare", "ciaschi", "corning bridge", "corning pavilion",
-    "folk art guild", "golf", "holiday inn", "ithaca hotel", "mental health", "plantations", "rpi engineering",
-    "tc hospital", "youth bureau"];
+const imageNames = ["big red barn", "chamber commerce", "childcare", "ciaschi", "corning bridge", "corning pavilion", "folk art guild", "golf", "holiday inn", "ithaca hotel", "mental health", "plantations", "rpi engineering", "tc hospital", "youth bureau"];
 let images = [];
 imageNames.forEach((curImageName) => {
     const lowerCaseName = curImageName.replace(/ /g, "").toLowerCase();
@@ -21,7 +19,8 @@ imageNames.forEach((curImageName) => {
     });
 });
 
-class Industrial extends Component {
+
+class Public extends Component {
     render () {
         return (
             <div>
@@ -34,4 +33,4 @@ class Industrial extends Component {
     }
 }
 
-export default Industrial;
+export default Public;

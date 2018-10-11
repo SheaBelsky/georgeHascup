@@ -13,7 +13,7 @@ class VerticalImage extends Component {
             ? element.childNodes[0]
             : element;
         const { name, src } = newElement;
-        if (type === "residentialHome") {
+        if (type === "landing") {
             changeImage(name, map);
         }
         else {
@@ -50,10 +50,18 @@ class VerticalImage extends Component {
 }
 
 class VerticalImageLadder extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            image: null,
+            label: null
+        };
+    }
+
     changeImage = (label, src) => {
         this.setState({
             image: src,
-            label: label
+            label
         });
     }
 
@@ -62,14 +70,6 @@ class VerticalImageLadder extends Component {
             image: null,
             label: null
         });
-    }
-
-    constructor(props) {
-        super(props);
-        this.state = {
-            image: null,
-            label: null
-        };
     }
 
     render() {
@@ -90,7 +90,7 @@ class VerticalImageLadder extends Component {
                         })
                     }
                 </div>
-                <div className={"image-preview"}>
+                <div className={`image-preview${type === "landing" ? " map" : ""}`}>
                     {this.state.image !== null &&
                         <img src={this.state.image} />
                     }

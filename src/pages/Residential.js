@@ -25,9 +25,11 @@ class Residential extends Component {
     render () {
         return (
             <div>
-                <Navigation />
+                <Navigation 
+                    navigationSubtitle="Residential"
+                />
                 <div className={"res-page page"}>
-                    <VerticalImageLadder images={images} type="residentialHome"/>
+                    <VerticalImageLadder images={images} type="landing"/>
                 </div>
             </div>
         );

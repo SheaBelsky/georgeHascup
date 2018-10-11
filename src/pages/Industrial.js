@@ -23,7 +23,9 @@ class Industrial extends Component {
     render () {
         return (
             <div>
-                <Navigation />
+                <Navigation 
+                    navigationSubtitle="Industrial"
+                />
                 <div className={"res-page page"}>
                     <VerticalImageLadder images={images} />
                 </div>

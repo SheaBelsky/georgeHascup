@@ -20,7 +20,9 @@ class Furniture extends Component {
     render () {
         return (
             <div>
-                <Navigation />
+                <Navigation 
+                    navigationSubtitle="Furniture"
+                />
                 <div className={"furn-page page"}>
                     <VerticalImageLadder images={images} width={5}/>
                 </div>

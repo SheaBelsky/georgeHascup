@@ -24,8 +24,19 @@ const images = [
     { original: homeImage5 }
 ];
 
+const typeNameMap = {
+    "ind": "Industrial",
+    "pub": "Public Realm",
+    "res": "Residential",
+};
+
 class Navigation extends Component {
     render() {
+        const { 
+            navigationSubtitle,
+            pageType
+        } = this.props;
+        const destination = typeNameMap[pageType];
         return (
             <div className={"nav"}>
                 <ImageGallery
@@ -76,6 +87,20 @@ class Navigation extends Component {
                             <a href={hascupVilla} target={"blank"}>Villa Adrianica</a>
                         </li>
                     </ul>
+                </div>
+                <div className="subtitle">
+                    {
+                        pageType && 
+                            <Link to={`/${destination.split(" ")[0].toLowerCase()}`}>
+                                Return to {destination}
+                            </Link>
+                    }
+                    {
+                        navigationSubtitle &&
+                            <span className="subtitle-text">
+                                {navigationSubtitle}
+                            </span>
+                    }
                 </div>
             </div>
         );

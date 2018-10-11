@@ -35,15 +35,24 @@
     }
 
     .image-preview {
-        align-items: stretch;
         display: flex;
-        flex-direction: column;
-        justify-content: stretch;
         margin-left: 10px;
         position: fixed;
         left: 40%;
         max-height: 70vh;
         max-width: 40vw;
+
+        &.map {
+            height: 377;
+            max-height: unset;
+            max-width: unset;
+            width: 700px;
+
+            img {
+                height: 100%;
+                width: 100%;
+            }
+        }
 
         img {
             flex: 1;
