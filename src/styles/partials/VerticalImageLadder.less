@@ -6,6 +6,7 @@
     
     .vertical-image-ladder {
         display: flex;
+        justify-content: space-around;
         flex-wrap: wrap;
         margin-left: 20px;
         width: 40%;
@@ -30,6 +31,15 @@
             img {
                 height: 125px;
                 width: 125px;
+            }
+
+            &.width-1 {
+                display: block;
+                width: inherit;
+
+                img {
+                    width: initial;
+                }
             }
         }
     }

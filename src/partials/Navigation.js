@@ -71,6 +71,10 @@ class Navigation extends Component {
                         </li>
                         <Square />
                         <li>
+                            <Link to={"/chairs"}>500 Chairs</Link>
+                        </li>
+                        <Square />
+                        <li>
                             <Link to={"#"}>Profile/Contact</Link>
                         </li>
                     </ul>

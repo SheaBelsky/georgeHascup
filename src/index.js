@@ -6,6 +6,7 @@ import { HashRouter, Route } from "react-router-dom";
 // Component imports
 import PageGallery from "./pages/PageGallery";
 
+import Chairs from "./pages/Chairs";
 import Furniture from "./pages/Furniture";
 import Gateway from "./pages/Gateway";
 import Home from "./pages/Home";
@@ -28,6 +29,7 @@ ReactDOM.render(
         <div id={"page-container"}>
             <Route exact path={"/"} component={ Gateway }></Route>
             <Route exact path={"/home"} component={ Home }></Route>
+            <Route exact path={"/chairs"} component={ Chairs }></Route>
             <Route exact path={"/furniture"} component={ Furniture }></Route>
             <Route exact path={"/industrial/"} component={ Industrial }></Route>
             <Route exact path={"/public/"} component={ Public }></Route>

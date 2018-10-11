@@ -26,6 +26,7 @@ class VerticalImage extends Component {
     }
     render() {
         const { 
+            className,
             image: {
                 name, 
                 link, 
@@ -37,7 +38,7 @@ class VerticalImage extends Component {
             : undefined;
         return (
             <a 
-                className="image-thumbnail"
+                className={`${className} image-thumbnail`}
                 onMouseEnter={this.handleMouseEnter}
                 href={imageLink}
                 key={src}
@@ -73,14 +74,19 @@ class VerticalImageLadder extends Component {
     }
 
     render() {
-        const { images, type } = this.props;
+        const { 
+            images, 
+            type, 
+            width = 3
+        } = this.props;
         return (
             <div className={"vertical-image-container"}>
                 <div className={"vertical-image-ladder"}>
                     {
                         images.map((image) => {
                             return (
-                                <VerticalImage 
+                                <VerticalImage
+                                    className={`width-${width}`}
                                     image={image}
                                     resetImage={this.resetImage}
                                     changeImage={this.changeImage}
