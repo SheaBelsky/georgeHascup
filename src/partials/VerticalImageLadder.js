@@ -33,11 +33,23 @@ class VerticalImage extends Component {
                 original: src
             } 
         } = this.props;
-        const imageLink = typeof link !== "undefined"
-            ? `${window.location}/${link}`
-            : undefined;
+        let imageLink;
+        if (typeof link !== "undefined") {
+            if (window.location.href.indexOf("corningGlass") !== -1) {
+                console.log(window.location);
+                imageLink = `${link}`;
+            }
+            else {
+                
+                imageLink = `${window.location}/${link}`;
+                
+            }
+        }
+        else {
+            imageLink = undefined;
+        }
         return (
-            <a 
+            <a
                 className={`${className} image-thumbnail`}
                 onMouseEnter={this.handleMouseEnter}
                 href={imageLink}

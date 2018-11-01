@@ -75,10 +75,12 @@ class Navigation extends Component {
                         </li>
                         <Square />
                         <li>
-                            <Link to={"#"}>Profile/Contact</Link>
+                            <Link to={"/corningGlass"}>Corning Glass</Link>
                         </li>
-                    </ul>
-                    <ul className={"right-nav"}>
+                        <Square />
+                        <li>
+                            <Link to={"/profile"}>Profile</Link>
+                        </li>
                         <li>
                             <a href={hascupMonogram} target={"blank"}>Complete Works</a>
                         </li>

@@ -7,10 +7,12 @@ import { HashRouter, Route } from "react-router-dom";
 import PageGallery from "./pages/PageGallery";
 
 import Chairs from "./pages/Chairs";
+import CorningGlass from "./pages/CorningGlass";
 import Furniture from "./pages/Furniture";
 import Gateway from "./pages/Gateway";
 import Home from "./pages/Home";
 import Industrial from "./pages/Industrial";
+import Profile from "./pages/Profile";
 import Public from "./pages/Public";
 import Residential from "./pages/Residential";
 
@@ -30,8 +32,10 @@ ReactDOM.render(
             <Route exact path={"/"} component={ Gateway }></Route>
             <Route exact path={"/home"} component={ Home }></Route>
             <Route exact path={"/chairs"} component={ Chairs }></Route>
+            <Route exact path={"/corningGlass"} component={ CorningGlass }></Route>
             <Route exact path={"/furniture"} component={ Furniture }></Route>
             <Route exact path={"/industrial/"} component={ Industrial }></Route>
+            <Route exact path={"/profile/"} component={ Profile }></Route>
             <Route exact path={"/public/"} component={ Public }></Route>
             <Route exact path={"/residential/"} component={ Residential }></Route>
             <Route exact path={"/:pagetype/gallery/:key"} component={ PageGallery }></Route>

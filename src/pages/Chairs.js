@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import ImageGallery from "react-image-gallery";
 
 import Navigation from "./../partials/Navigation";
 import VerticalImageLadder from "./../partials/VerticalImageLadder";

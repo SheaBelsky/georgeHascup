@@ -1,0 +1,33 @@
+.profile-page.page {
+    align-items: initial;
+    justify-content: space-evenly;
+    color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 5%;
+
+    a {
+        color: grey;
+        transition: color 0.3s;
+
+        &:hover {
+            color: lighten(grey, 20%);
+        }
+    }
+
+    .column {
+        width: 50%;
+    }
+
+    .poster {
+        img {
+            display: block;
+            width: 80%;
+        }
+    }
+
+    .poster + .poster {
+        margin-top: 30px;
+    }
+}
