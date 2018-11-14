@@ -87,6 +87,7 @@ class VerticalImageLadder extends Component {
 
     render() {
         const { 
+            children,
             images, 
             type, 
             width = 3
@@ -107,6 +108,9 @@ class VerticalImageLadder extends Component {
                             );
                         })
                     }
+                    <div className="pagination">
+                        {typeof children === "object" && children}
+                    </div>
                 </div>
                 <div className={`image-preview${type === "landing" ? " map" : ""}`}>
                     {this.state.image !== null &&

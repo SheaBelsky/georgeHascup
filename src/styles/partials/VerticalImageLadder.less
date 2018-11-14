@@ -7,6 +7,7 @@
     .vertical-image-ladder {
         display: flex;
         flex-wrap: wrap;
+        justify-content: space-between;
         margin-left: 20px;
         width: 40%;
 
@@ -40,14 +41,24 @@
                     width: initial;
                 }
             }
+
+            &.width-5 {
+                display: block;
+                height: 90px;
+                width: 90px;
+
+                img {
+                    height: 90px;
+                    width: 90px;
+                }
+            }
         }
     }
 
     .image-preview {
         display: flex;
-        margin-left: 10px;
         position: fixed;
-        left: 40%;
+        left: 50%;
         max-height: 70vh;
         max-width: 40vw;
 
@@ -56,7 +67,7 @@
             height: 446px;
             max-height: unset;
             max-width: unset;
-            width: 500px;
+            width: 600px;
 
             img {
                 height: 100%;

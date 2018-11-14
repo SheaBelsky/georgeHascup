@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import ReactPaginate from "react-paginate";
 
 import Navigation from "./../partials/Navigation";
 import VerticalImageLadder from "./../partials/VerticalImageLadder";
@@ -27,14 +28,45 @@ for (let i = 1; i < 197; i++) {
 }
 
 class Furniture extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            images: images.slice(0, 25),
+            offset: 0
+        };
+    }
+
+    handlePageClick = (data) => {
+        let selected = data.selected;
+        let offset = Math.ceil(selected * 25);
+        console.log(selected);
+    
+        this.setState({
+            images: images.slice(offset, offset + 25)
+        });
+    }
+
     render () {
+        const { 
+            images: slicedImages
+        } = this.state;
         return (
             <div>
                 <Navigation 
                     navigationSubtitle="Furniture"
                 />
                 <div className={"furn-page page"}>
-                    <VerticalImageLadder images={images} width={5}/>
+                    <VerticalImageLadder images={slicedImages} width={5}>
+                        <ReactPaginate 
+                            pageCount={8}
+                            pageRangeDisplayed={3}
+                            marginPagesDisplayed={2}
+                            previousLabel={"previous"}
+                            nextLabel={"next"}
+                            breakLabel={"..."}
+                            onPageChange={this.handlePageClick}
+                        />
+                    </VerticalImageLadder>
                 </div>
             </div>
         );

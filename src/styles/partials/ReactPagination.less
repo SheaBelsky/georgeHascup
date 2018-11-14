@@ -1,0 +1,22 @@
+.pagination {
+    color: white;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+
+    ul {
+        display: flex;
+        justify-content: space-around;
+        list-style-type: none;
+        padding: 0;
+
+        li, li a {
+            cursor: pointer;
+            outline: none;
+            
+            &:hover, &.selected {
+                text-decoration: underline;
+            }
+        }
+    }
+}
