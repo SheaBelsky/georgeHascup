@@ -6,6 +6,8 @@ import VerticalImageLadder from "./../partials/VerticalImageLadder";
 // CSS
 import "../styles/pages/furniture.less";
 
+const numImagesPerPage = 50;
+
 // Images
 let images = [];
 for (let i = 1; i < 197; i++) {
@@ -31,18 +33,17 @@ class Furniture extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            images: images.slice(0, 25),
+            images: images.slice(0, numImagesPerPage),
             offset: 0
         };
     }
 
     handlePageClick = (data) => {
         let selected = data.selected;
-        let offset = Math.ceil(selected * 25);
-        console.log(selected);
+        let offset = Math.ceil(selected * numImagesPerPage);
     
         this.setState({
-            images: images.slice(offset, offset + 25)
+            images: images.slice(offset, offset + numImagesPerPage)
         });
     }
 
@@ -56,9 +57,13 @@ class Furniture extends Component {
                     navigationSubtitle="Furniture"
                 />
                 <div className={"furn-page page"}>
-                    <VerticalImageLadder images={slicedImages} width={5}>
+                    <VerticalImageLadder 
+                        allImages={images}
+                        images={slicedImages} 
+                        type={"gallery"}
+                    >
                         <ReactPaginate 
-                            pageCount={8}
+                            pageCount={4}
                             pageRangeDisplayed={3}
                             marginPagesDisplayed={2}
                             previousLabel={"previous"}

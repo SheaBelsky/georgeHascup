@@ -237,7 +237,10 @@ class PageGallery extends Component {
                 <div className={"res-page page"} key={key}>
                     {
                         typeof images === "object" &&
-                            <VerticalImageLadder images={images} />
+                            <VerticalImageLadder 
+                                images={images}
+                                type="gallery"
+                            />
                     }
                 </div>
             </div>

@@ -13,6 +13,10 @@ const gatewayImage4 = require("../media/gateway/4.jpg");
 const gatewayImage5 = require("../media/gateway/5.jpg");
 const gatewayImage6 = require("../media/gateway/6.jpg");
 const gatewayImage7 = require("../media/gateway/7.jpg");
+const gatewayImage8 = require("../media/gateway/8.jpg");
+const gatewayImage9 = require("../media/gateway/9.jpg");
+const gatewayImage10 = require("../media/gateway/10.jpg");
+
 
 // TODO: Fix jump in first image?
 
@@ -26,6 +30,9 @@ export default class Gateway extends Component {
             { original: gatewayImage5 },
             { original: gatewayImage6 },
             { original: gatewayImage7 },
+            { original: gatewayImage8 },
+            { original: gatewayImage9 },
+            { original: gatewayImage10 },
         ];
         return (
             <div className={"gateway-page page"}>

@@ -6,9 +6,10 @@
     
     .vertical-image-ladder {
         display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        margin-left: 20px;
+        flex-flow: row wrap;
+        justify-content: space-evenly;
+        margin: 0 2%;
+        overflow: hidden;
         width: 40%;
 
         .image-label {
@@ -22,15 +23,17 @@
         }
     
         .image-thumbnail {
+            border: 1px solid white;
             cursor: pointer;
-            height: @thumbnail-dimension;
+            height: 125px;
             margin: 5px;
             text-decoration: none;
-            width: @thumbnail-dimension;
+            width: 125px;
 
             img {
-                height: 125px;
-                width: 125px;
+                height: 100%;
+                object-fit: cover;
+                width: 100%;
             }
 
             &.width-1 {
@@ -53,6 +56,19 @@
                 }
             }
         }
+
+        &.vertical-image-ladder--gallery {
+            flex: 1 0 5%;
+            width: 100%;
+        }
+
+        &.vertical-image-ladder--landing {
+            width: 40%;
+
+            .image-thumbnail {
+                margin: 20px 5px;
+            }
+        }
     }
 
     .image-preview {
@@ -64,14 +80,12 @@
 
         &.map {
             border: 2px solid white;
-            height: 446px;
+            height: 300px;
             max-height: unset;
             max-width: unset;
-            width: 600px;
 
             img {
-                height: 100%;
-                width: 100%;
+                height: 50%;
             }
         }
 

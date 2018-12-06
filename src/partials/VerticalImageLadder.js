@@ -1,8 +1,9 @@
 import React, { Component } from "react";
-import { Link } from "react-router";
+import Lightbox from "react-image-lightbox";
 import PropTypes from "prop-types";
-
+import "react-image-lightbox/style.css"; 
 import "../styles/partials/VerticalImageLadder.less";
+
 
 class VerticalImage extends Component {
     handleMouseEnter = (e) => {
@@ -20,29 +21,33 @@ class VerticalImage extends Component {
             changeImage(name, src);
         }
     }
+    handleImageClick = () => {
+        const { 
+            imageIndex,
+            openLightbox
+        } = this.props;
+        openLightbox(imageIndex);
+    }
     handleMouseLeave = () => {
         const { resetImage } = this.props;
         resetImage();
     }
     render() {
-        const { 
-            className,
+        const {
             image: {
                 name, 
                 link, 
                 original: src
-            } 
+            },
+            type
         } = this.props;
         let imageLink;
         if (typeof link !== "undefined") {
             if (window.location.href.indexOf("corningGlass") !== -1) {
-                console.log(window.location);
                 imageLink = `${link}`;
             }
             else {
-                
                 imageLink = `${window.location}/${link}`;
-                
             }
         }
         else {
@@ -50,12 +55,12 @@ class VerticalImage extends Component {
         }
         return (
             <a
-                className={`${className} image-thumbnail`}
-                onMouseEnter={this.handleMouseEnter}
-                href={imageLink}
-                key={src}
+                className={`image-thumbnail`}
+                onMouseEnter={type === "landing" ? this.handleMouseEnter : undefined}
+                onClick={type === "gallery" ? this.handleImageClick : undefined}
+                href={type === "landing" ? imageLink : undefined}
             >
-                <img alt={name} src={src} key={src}/>
+                <img alt={name} src={src} />
                 <div className="image-label">{name}</div>
             </a>
         );
@@ -67,7 +72,9 @@ class VerticalImageLadder extends Component {
         super(props);
         this.state = {
             image: null,
-            label: null
+            label: null,
+            lightboxIndex: 0,
+            lightboxOpen: false
         };
     }
 
@@ -85,24 +92,37 @@ class VerticalImageLadder extends Component {
         });
     }
 
+    openLightbox = (imageIndex) => {
+        this.setState({
+            lightboxIndex: imageIndex,
+            lightboxOpen: true
+        });
+    }
+
     render() {
         const { 
+            allImages = this.props.images,
             children,
-            images, 
-            type, 
-            width = 3
+            images,
+            type,
         } = this.props;
+        const {
+            lightboxIndex,
+            lightboxOpen
+        } = this.state;
         return (
             <div className={"vertical-image-container"}>
-                <div className={"vertical-image-ladder"}>
+                <div className={`vertical-image-ladder vertical-image-ladder--${type}`}>
                     {
-                        images.map((image) => {
+                        images.map((image, index) => {
                             return (
                                 <VerticalImage
-                                    className={`width-${width}`}
-                                    image={image}
-                                    resetImage={this.resetImage}
                                     changeImage={this.changeImage}
+                                    image={image}
+                                    key={index}
+                                    imageIndex={index}
+                                    openLightbox={this.openLightbox}
+                                    resetImage={this.resetImage}
                                     type={type}
                                 />
                             );
@@ -112,14 +132,35 @@ class VerticalImageLadder extends Component {
                         {typeof children === "object" && children}
                     </div>
                 </div>
-                <div className={`image-preview${type === "landing" ? " map" : ""}`}>
-                    {this.state.image !== null &&
-                        <img src={this.state.image} />
-                    }
-                    <div className={"image-preview-label"}>
-                        {this.state.label !== null && this.state.label}
-                    </div>
-                </div>
+                {
+                    type !== "gallery" && this.state.image && 
+                        <div className={`image-preview${type === "landing" ? " map" : ""}`}>
+                            {this.state.image !== null &&
+                                <img src={this.state.image} />
+                            }
+                            <div className={"image-preview-label"}>
+                                {this.state.label !== null && this.state.label}
+                            </div>
+                        </div>
+                }
+                {lightboxOpen === true && (
+                    <Lightbox
+                        mainSrc={allImages[lightboxIndex]["original"]}
+                        nextSrc={allImages[(lightboxIndex + 1) % allImages.length]["original"]}
+                        prevSrc={allImages[(lightboxIndex + allImages.length - 1) % allImages.length]["original"]}
+                        onCloseRequest={() => this.setState({ lightboxOpen: false })}
+                        onMovePrevRequest={() =>
+                            this.setState({
+                                lightboxIndex: (lightboxIndex + allImages.length - 1) % allImages.length,
+                            })
+                        }
+                        onMoveNextRequest={() =>
+                            this.setState({
+                                lightboxIndex: (lightboxIndex + 1) % allImages.length,
+                            })
+                        }
+                    />
+                )}
             </div>
         );
     }

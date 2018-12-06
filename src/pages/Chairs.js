@@ -6,24 +6,26 @@ import VerticalImageLadder from "./../partials/VerticalImageLadder";
 // CSS
 import "../styles/pages/Chairs.less";
 
+const numImagesPerPage = 50;
+
 // Images
 let images = [];
-for (let i = 1; i < 117; i++) {
+for (let i = 1; i < 508; i++) {
     let newI;
     // i = i < 10  ? `00${i}` : i;
     // i = i < 100 ? `0${i}` : 1;
     if (i < 10) {
-        newI = `00${i}`;
+        newI = `0000${i}`;
     }
     else if (i >= 10 && i < 100) {
-        newI = `0${i}`;
+        newI = `000${i}`;
     }
     else {
-        newI = i;
+        newI = `00${i}`;
     }
     images.push({
-        original: require(`../media/chairs/chairs${newI}.jpg`),
-        key: `chairs${newI}.jpg`
+        original: require(`../media/chairs/chairs_${newI}.jpg`),
+        key: `chairs_${newI}.jpg`
     });
 }
 
@@ -31,35 +33,39 @@ class Chairs extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            images: images.slice(0, 5),
+            images: images.slice(0, numImagesPerPage),
             offset: 0
         };
+        console.log(images.length);
     }
 
     handlePageClick = (data) => {
         let selected = data.selected;
-        let offset = Math.ceil(selected * 5);
-        console.log(selected);
+        let offset = Math.ceil(selected * numImagesPerPage);
     
         this.setState({
-            images: images.slice(offset, offset + 5)
+            images: images.slice(offset, offset + numImagesPerPage)
         });
+        
     }
 
     render () {
         const { 
             images: slicedImages 
         } = this.state;
-        console.log(slicedImages);
         return (
             <div>
                 <Navigation 
                     navigationSubtitle="500 Chairs"
                 />
                 <div className={"chairs-page page"}>
-                    <VerticalImageLadder images={slicedImages} width={1}>
+                    <VerticalImageLadder 
+                        allImages={images}
+                        images={slicedImages} 
+                        type={"gallery"}
+                    >
                         <ReactPaginate 
-                            pageCount={24}
+                            pageCount={11}
                             pageRangeDisplayed={3}
                             marginPagesDisplayed={2}
                             previousLabel={"previous"}

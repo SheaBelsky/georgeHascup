@@ -24,6 +24,7 @@
         "react-dom": "^16.6.3",
         "react-grid-gallery": "^0.4.11",
         "react-image-gallery": "^0.8.12",
+        "react-image-lightbox": "^5.0.0",
         "react-paginate": "^6.0.0",
         "react-router-dom": "^4.3.1"
     },
