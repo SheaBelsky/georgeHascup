@@ -2,7 +2,7 @@ const ExtractTextPlugin = require("extract-text-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
 
-const SITE_URL = "http://www.georgehascup.com/";
+const SITE_URL = "https://www.georgehascup.com/";
 
 const plugins = [
     new ExtractTextPlugin({
