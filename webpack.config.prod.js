@@ -1,7 +1,6 @@
 const ExtractTextPlugin       = require("extract-text-webpack-plugin");
 const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const path                    = require("path");
-const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const webpack                 = require("webpack");
 
 const SITE_URL = "https://sheabelsky.github.io/georgeHascup/";

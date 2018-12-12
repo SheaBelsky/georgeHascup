@@ -35,7 +35,7 @@ class Profile extends Component {
                         <div>cell: 607-379-0807</div>
 
                         <h2>
-                            <a href="http://www.georgehascup.com/old">Old Website (requires Adobe Flash)</a>
+                            <a href="https://www.georgehascup.com/old">Old Website (requires Adobe Flash)</a>
                         </h2>
                     </div>
                     <div className="column">
