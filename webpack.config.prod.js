@@ -4,7 +4,7 @@ const path                    = require("path");
 const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const webpack                 = require("webpack");
 
-const SITE_URL = "http://www.georgehascup.com/";
+const SITE_URL = "https://sheabelsky.github.io/georgeHascup/";
 
 const plugins = [
     new ExtractTextPlugin({
