@@ -6,7 +6,7 @@ import VerticalImageLadder from "./../partials/VerticalImageLadder";
 // CSS
 import "../styles/pages/Chairs.less";
 
-const numberOfImages = 109;
+const numberOfImages = 385;
 const numberOfImagesPerPage = 25;
 
 // Images
@@ -16,16 +16,16 @@ for (let i = 1; i < numberOfImages; i++) {
     // i = i < 10  ? `00${i}` : i;
     // i = i < 100 ? `0${i}` : 1;
     if (i < 10) {
-        newI = `000${i}`;
+        newI = `0000${i}`;
     }
     else if (i >= 10 && i < 100) {
-        newI = `00${i}`;
+        newI = `000${i}`;
     }
     else {
-        newI = `0${i}`;
+        newI = `00${i}`;
     }
     images.push({
-        original: require(`../media/chairs/chairs${newI}.jpg`),
+        original: require(`../media/chairs/chairs_${newI}.jpg`),
         key: `chairs${newI}.jpg`
     });
 }
@@ -44,14 +44,16 @@ class Chairs extends Component {
         let offset = Math.ceil(selected * numberOfImagesPerPage);
     
         this.setState({
-            images: images.slice(offset, offset + numberOfImagesPerPage)
+            images: images.slice(offset, offset + numberOfImagesPerPage),
+            offset: offset
         });
         
     }
 
     render () {
         const { 
-            images: slicedImages 
+            images: slicedImages,
+            offset
         } = this.state;
         const numberOfPages = Math.ceil(numberOfImages / numberOfImagesPerPage);
         return (
@@ -63,6 +65,7 @@ class Chairs extends Component {
                     <VerticalImageLadder 
                         allImages={images}
                         images={slicedImages} 
+                        offset={offset}
                         type={"gallery"}
                     >
                         <ReactPaginate 

@@ -44,13 +44,15 @@ class Furniture extends Component {
         let offset = Math.ceil(selected * numberOfImagesPerPage);
     
         this.setState({
-            images: images.slice(offset, offset + numberOfImagesPerPage)
+            images: images.slice(offset, offset + numberOfImagesPerPage),
+            offset: offset
         });
     }
 
     render () {
         const { 
-            images: slicedImages
+            images: slicedImages,
+            offset
         } = this.state;
         const numberOfPages = Math.ceil(numberOfImages / numberOfImagesPerPage);
         return (
@@ -62,6 +64,7 @@ class Furniture extends Component {
                     <VerticalImageLadder 
                         allImages={images}
                         images={slicedImages} 
+                        offset={offset}
                         type={"gallery"}
                     >
                         <ReactPaginate 

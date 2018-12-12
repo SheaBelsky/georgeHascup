@@ -93,6 +93,7 @@ class VerticalImageLadder extends Component {
     }
 
     openLightbox = (imageIndex) => {
+        console.log(imageIndex);
         this.setState({
             lightboxIndex: imageIndex,
             lightboxOpen: true
@@ -104,6 +105,7 @@ class VerticalImageLadder extends Component {
             allImages = this.props.images,
             children,
             images,
+            offset,
             type,
         } = this.props;
         const {
@@ -115,12 +117,13 @@ class VerticalImageLadder extends Component {
                 <div className={`vertical-image-ladder vertical-image-ladder--${type}`}>
                     {
                         images.map((image, index) => {
+                            console.log(offset, index);
                             return (
                                 <VerticalImage
                                     changeImage={this.changeImage}
                                     image={image}
-                                    key={index}
-                                    imageIndex={index}
+                                    key={offset + index}
+                                    imageIndex={offset + index}
                                     openLightbox={this.openLightbox}
                                     resetImage={this.resetImage}
                                     type={type}
