@@ -3,7 +3,7 @@ const OptimizeCssAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const path                    = require("path");
 const webpack                 = require("webpack");
 
-const SITE_URL = "https://sheabelsky.github.io/georgeHascup/";
+const SITE_URL = "https://www.georgehascup.com/";
 
 const plugins = [
     new ExtractTextPlugin({
