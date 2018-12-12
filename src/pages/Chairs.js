@@ -6,26 +6,27 @@ import VerticalImageLadder from "./../partials/VerticalImageLadder";
 // CSS
 import "../styles/pages/Chairs.less";
 
-const numImagesPerPage = 50;
+const numberOfImages = 109;
+const numberOfImagesPerPage = 25;
 
 // Images
 let images = [];
-for (let i = 1; i < 508; i++) {
+for (let i = 1; i < numberOfImages; i++) {
     let newI;
     // i = i < 10  ? `00${i}` : i;
     // i = i < 100 ? `0${i}` : 1;
     if (i < 10) {
-        newI = `0000${i}`;
-    }
-    else if (i >= 10 && i < 100) {
         newI = `000${i}`;
     }
-    else {
+    else if (i >= 10 && i < 100) {
         newI = `00${i}`;
     }
+    else {
+        newI = `0${i}`;
+    }
     images.push({
-        original: require(`../media/chairs/chairs_${newI}.jpg`),
-        key: `chairs_${newI}.jpg`
+        original: require(`../media/chairs/chairs${newI}.jpg`),
+        key: `chairs${newI}.jpg`
     });
 }
 
@@ -33,18 +34,17 @@ class Chairs extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            images: images.slice(0, numImagesPerPage),
+            images: images.slice(0, numberOfImagesPerPage),
             offset: 0
         };
-        console.log(images.length);
     }
 
     handlePageClick = (data) => {
         let selected = data.selected;
-        let offset = Math.ceil(selected * numImagesPerPage);
+        let offset = Math.ceil(selected * numberOfImagesPerPage);
     
         this.setState({
-            images: images.slice(offset, offset + numImagesPerPage)
+            images: images.slice(offset, offset + numberOfImagesPerPage)
         });
         
     }
@@ -53,6 +53,7 @@ class Chairs extends Component {
         const { 
             images: slicedImages 
         } = this.state;
+        const numberOfPages = Math.ceil(numberOfImages / numberOfImagesPerPage);
         return (
             <div>
                 <Navigation 
@@ -65,7 +66,7 @@ class Chairs extends Component {
                         type={"gallery"}
                     >
                         <ReactPaginate 
-                            pageCount={11}
+                            pageCount={numberOfPages}
                             pageRangeDisplayed={3}
                             marginPagesDisplayed={2}
                             previousLabel={"previous"}
