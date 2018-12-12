@@ -33,6 +33,10 @@ class Profile extends Component {
                         <div>318 S. Geneva St.</div>
                         <div>Ithaca, NY 14850</div>
                         <div>cell: 607-379-0807</div>
+
+                        <h2>
+                            <a href="http://www.georgehascup.com/old">Old Website (requires Adobe Flash)</a>
+                        </h2>
                     </div>
                     <div className="column">
                         <div className="poster">

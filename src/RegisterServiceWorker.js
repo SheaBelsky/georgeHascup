@@ -18,7 +18,7 @@ const isLocalhost = Boolean(
     )
 );
 
-const PUBLIC_URL = "https://sheabelsky.github.io/georgeHascup";
+const PUBLIC_URL = process.env.SITE_URL;
 
 export default function register() {
     if ("serviceWorker" in navigator) {

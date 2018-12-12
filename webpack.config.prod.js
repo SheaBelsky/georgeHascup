@@ -4,6 +4,8 @@ const path                    = require("path");
 const SWPrecacheWebpackPlugin = require("sw-precache-webpack-plugin");
 const webpack                 = require("webpack");
 
+const SITE_URL = "http://www.georgehascup.com/";
+
 const plugins = [
     new ExtractTextPlugin({
         filename: "css/styles.css"
@@ -11,13 +13,16 @@ const plugins = [
     new OptimizeCssAssetsPlugin({
         cssProcessorOptions: { discardComments: { removeAll: true } }
     }),
+    new webpack.DefinePlugin({
+        "process.env.SITE_URL": SITE_URL
+    })
 ];
 
 module.exports = {
     entry: `${__dirname}/src/index.js`,
     output: {
         path: `${__dirname}/docs`,
-        publicPath: "https://sheabelsky.github.io/georgeHascup/",
+        publicPath: SITE_URL,
         filename: "js/bundle.js",
     },
     devServer: {

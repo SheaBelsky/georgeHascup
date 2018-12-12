@@ -1,9 +1,15 @@
-const ExtractTextPlugin       = require("extract-text-webpack-plugin");
-const path                    = require("path");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
+const path = require("path");
+const webpack = require("webpack");
+
+const SITE_URL = "http://www.georgehascup.com/";
 
 const plugins = [
     new ExtractTextPlugin({
         filename: "css/styles.css"
+    }),
+    new webpack.DefinePlugin({
+        "process.env.SITE_URL": SITE_URL
     })
 ];
 
