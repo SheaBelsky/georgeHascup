@@ -48,20 +48,25 @@ class Navigation extends Component {
     }
     
     handleScroll = (event) => {
-        // Deermine if the nav is already fixed to the page
+        // Determine if the nav is already fixed to the page
         const { navFixed } = this.state;
         // Save the element we're wanting to scroll 
-        const el = document.querySelector(".nav-container");
+        const navElement = document.querySelector(".nav-container");
+        const pageElement = document.querySelector(".page");
         // Get the current scroll position of the window
         const pageY = window.scrollY;
         // If we've scrolled into the area where the top image gallery is supposed to be, un-fix the navigation
         if (pageY <= 100) {
+            // Reset the margin of the page
+            pageElement.style.marginTop = "0";
             this.setState({
                 navFixed: false
             });
         }
         // If we've scrolled past the top of the navigation and it isn't already fixed, stick it
-        if (el.getBoundingClientRect().top <= 0 && navFixed !== true) {
+        if (navElement.getBoundingClientRect().top <= 0 && navFixed !== true) {
+            // Offset the page by the height of the nav (can't do with CSS because height of nav changes)
+            pageElement.style.marginTop = `${navElement.offsetHeight}px`;
             this.setState({
                 navFixed: true
             });

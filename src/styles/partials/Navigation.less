@@ -20,11 +20,10 @@
         a {
             color: white;
             text-decoration: none;
-            transition: 0.3s;
+            transition: 0.3s text-decoration;
 
             &:hover {
-                font-weight: bold;
-                transition: 0.3s;
+                text-decoration: underline;
             }
         }
     }
@@ -61,6 +60,10 @@
                     margin: 5px 0 0;
                     padding: 0 10px;
                     transition: 0.3s text-decoration;
+
+                    &:first-child {
+                        padding-left: 2%;
+                    }
     
                     a {
                         color: white;
