@@ -131,6 +131,7 @@ class Navigation extends Component {
                             <li>
                                 <Link to={"/profile"}>Profile</Link>
                             </li>
+                            <Square />
                             <li>
                                 <a href={hascupMonogram} target={"blank"}>Complete Works</a>
                             </li>

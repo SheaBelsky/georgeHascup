@@ -117,13 +117,15 @@ class VerticalImageLadder extends Component {
                 <div className={`vertical-image-ladder vertical-image-ladder--${type}`}>
                     {
                         images.map((image, index) => {
-                            console.log(offset, index);
+                            const imageIndex = typeof offset === "number"
+                                ? offset + index
+                                : index;
                             return (
                                 <VerticalImage
                                     changeImage={this.changeImage}
                                     image={image}
-                                    key={offset + index}
-                                    imageIndex={offset + index}
+                                    key={imageIndex}
+                                    imageIndex={imageIndex}
                                     openLightbox={this.openLightbox}
                                     resetImage={this.resetImage}
                                     type={type}
