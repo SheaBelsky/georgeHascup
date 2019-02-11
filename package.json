@@ -1,6 +1,6 @@
 {
     "name": "george-hascup-portfolio",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "main": "index.js",
     "description": "Portfolio for George Hascup Architecture",
     "scripts": {
@@ -12,7 +12,7 @@
         "url": "git+https://github.com/SheaBelsky/georgeHascup.git"
     },
     "keywords": [],
-    "author": "",
+    "author": "Shea Belsky <sheabelsky@gmail.com>",
     "license": "MIT",
     "bugs": {
         "url": "https://github.com/SheaBelsky/georgeHascup/issues"

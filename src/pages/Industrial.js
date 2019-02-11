@@ -27,7 +27,7 @@ class Industrial extends Component {
                     navigationSubtitle="Industrial"
                 />
                 <div className={"res-page page"}>
-                    <VerticalImageLadder images={images} />
+                    <VerticalImageLadder images={images} type="landing" />
                 </div>
             </div>
         );
